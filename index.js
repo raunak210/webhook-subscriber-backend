@@ -15,7 +15,9 @@ const app = express();
 const PORT = process.env.PORT || 6000;
 
 // Middleware
-app.use(cors());
+
+app.use(cors({ origin: '*' })); //need to change later for security
+
 app.use(express.json());
 
 console.log("index.js");
